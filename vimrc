@@ -15,3 +15,4 @@ syntax on
 colorscheme vividchalk
 
 nmap <leader>d :NERDTreeToggle<CR>
+nmap <leader>t :TlistToggle<CR>
