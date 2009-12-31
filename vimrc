@@ -1,4 +1,3 @@
-
 runtime! autoload/pathogen.vim
 
 if exists('g:loaded_pathogen')
@@ -16,3 +15,4 @@ colorscheme vividchalk
 
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>t :TlistToggle<CR>
+nmap <leader>w <c-w>w
