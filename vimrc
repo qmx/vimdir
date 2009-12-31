@@ -1,5 +1,6 @@
 
 runtime! autoload/pathogen.vim
+
 if exists('g:loaded_pathogen')
   call pathogen#runtime_prepend_subdirectories(expand('~/.vim/bundles'))
 end
@@ -11,4 +12,6 @@ set autoindent
 set expandtab
 
 syntax on
-colorscheme ir_black
+colorscheme vividchalk
+
+nmap <leader>d :NERDTreeToggle<CR>
