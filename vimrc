@@ -11,7 +11,7 @@ set autoindent
 set expandtab
 
 syntax on
-colorscheme vividchalk
+colorscheme desert
 
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>t :TlistToggle<CR>
