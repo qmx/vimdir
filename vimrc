@@ -10,6 +10,8 @@ set shiftwidth=2
 set autoindent
 set expandtab
 
+set number
+
 syntax on
 colorscheme desert
 
