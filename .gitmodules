@@ -22,3 +22,6 @@
 [submodule "bundles/nerdcommenter"]
 	path = bundles/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "bundles/vim-ruby"]
+	path = bundles/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
