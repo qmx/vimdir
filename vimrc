@@ -26,3 +26,4 @@ colorscheme desert
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>t :TlistToggle<CR>
 nmap <leader>w <c-w>w
+imap <c-space> <c-n>
