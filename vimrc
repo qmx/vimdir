@@ -13,6 +13,8 @@ set expandtab
 set noeol
 set binary
 
+set linebreak
+
 set number
 
 syntax on
