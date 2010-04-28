@@ -28,7 +28,7 @@ filetype indent on
 filetype plugin on
 compiler ruby
 
-colorscheme desert
+colorscheme vividchalk
 
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>t :TlistToggle<CR>
