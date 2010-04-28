@@ -4,6 +4,11 @@ if exists('g:loaded_pathogen')
   call pathogen#runtime_prepend_subdirectories(expand('~/.vim/bundles'))
 end
 
+if has("gui_running")
+    set guioptions=egmrt
+endif
+
+
 set nocompatible
 set tabstop=2
 set smarttab
