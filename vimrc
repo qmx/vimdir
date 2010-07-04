@@ -38,3 +38,5 @@ nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>t :TlistToggle<CR>
 nmap <leader>w <c-w>w
 imap <c-space> <c-n>
+
+let g:tex_flavor='latex'
