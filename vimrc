@@ -22,6 +22,8 @@ set binary
 
 set linebreak
 
+set listchars=tab:▹\ ,eol:¬
+set list
 set number
 
 syntax on
