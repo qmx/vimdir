@@ -31,3 +31,6 @@
 [submodule "bundles/vim-markdown"]
 	path = bundles/vim-markdown
 	url = git://github.com/tpope/vim-markdown.git
+[submodule "bundles/vim-fugitive"]
+	path = bundles/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
