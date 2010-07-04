@@ -12,10 +12,11 @@ endif
 
 set nocompatible
 set tabstop=2
-set smarttab
 set shiftwidth=2
-set autoindent
+set softtabstop=2
 set expandtab
+set smarttab
+set autoindent
 set noeol
 set binary
 
