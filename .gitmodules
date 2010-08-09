@@ -34,6 +34,9 @@
 [submodule "bundles/vim-fugitive"]
 	path = bundles/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+[submodule "bundles/vim-align"]
+	path = bundles/vim-align
+	url = git://github.com/tsaleh/vim-align.git
 [submodule "bundles/gist-vim"]
 	path = bundles/gist-vim
 	url = http://github.com/mattn/gist-vim.git
