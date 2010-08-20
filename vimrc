@@ -11,7 +11,7 @@ endif
 
 """ fix for some stupid terms
 if &term == "screen"
-	set term = xterm
+	let term = "xterm"
 endif
 
 set nocompatible
