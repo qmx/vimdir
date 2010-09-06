@@ -68,7 +68,7 @@ filetype indent on
 filetype plugin on
 compiler ruby
 
-colorscheme vividchalk
+colorscheme desert
 set background=dark
 
 """ folding settings
