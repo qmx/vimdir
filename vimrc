@@ -72,6 +72,7 @@ colorscheme desert
 set background=dark
 
 """ folding settings
+set nofoldenable
 augroup vimrc
 	au BufReadPre * setlocal foldmethod=indent
 	au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
