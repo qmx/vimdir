@@ -85,6 +85,7 @@ nmap <leader>f :set foldmethod=indent<CR>
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>t :TlistToggle<CR>
 nmap <leader>w <c-w>w
+nmap <leader>j :JavaSearchContext<CR>
 
 let g:tex_flavor='latex'
 
