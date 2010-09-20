@@ -40,3 +40,6 @@
 [submodule "bundles/gist-vim"]
 	path = bundles/gist-vim
 	url = http://github.com/mattn/gist-vim.git
+[submodule "bundles/vim-afc"]
+	path = bundles/vim-afc
+	url = git://github.com/adrianoalmeida7/vim-afc.git
