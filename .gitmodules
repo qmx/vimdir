@@ -46,3 +46,6 @@
 [submodule "bundles/rvm_ruby.vim"]
 	path = bundles/rvm_ruby.vim
 	url = git://github.com/jcf/rvm_ruby.vim.git
+[submodule "bundles/command-t"]
+	path = bundles/command-t
+	url = git://git.wincent.com/command-t.git
