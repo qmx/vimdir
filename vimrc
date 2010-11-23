@@ -98,6 +98,10 @@ augroup END
 """ remapping leader to comma key
 let mapleader = ","
 
+""" reload .vimrc
+nmap <leader>v :source $MYVIMRC<CR>
+nmap <leader>V :tabnew $MYVIMRC<CR>
+
 nmap <leader>f :set foldmethod=indent<CR>
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>t :TlistToggle<CR>
