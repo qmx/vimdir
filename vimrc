@@ -104,7 +104,6 @@ nmap <leader>V :tabnew $MYVIMRC<CR>
 
 nmap <leader>f :set foldmethod=indent<CR>
 nmap <leader>d :NERDTreeToggle<CR>
-nmap <leader>t :TlistToggle<CR>
 nmap <leader>w <c-w>w
 
 let g:tex_flavor='latex'
