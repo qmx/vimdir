@@ -38,6 +38,9 @@ set autoindent
 set noeol
 set binary
 
+""" ignore list
+set wildignore+=*.o,*.obj,*.class,.git,bin,target
+
 """ autocomplete config
 set wildmode=list:longest,full
 
