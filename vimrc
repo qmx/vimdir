@@ -15,10 +15,24 @@ if &term == "screen"
 endif
 
 set nocompatible
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
+
+if has("autocmd")
+	" File type detection
+	filetype on
+	filetype plugin indent on
+
+	"default settings"
+	set ts=2 sts=2 sw=2 expandtab
+
+	" Styles depending on file type
+	autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
+	autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
+	
+	" Treat different file types as one we know:
+	autocmd BufNewFile,BufRead *.rss,*.atom setfiletype xml
+endif
+
 set smarttab
 set autoindent
 set noeol
