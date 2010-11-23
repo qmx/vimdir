@@ -76,8 +76,8 @@ set shm=filmnrwxt
 
 set linebreak
 
-set listchars=tab:▹\ ,eol:¬
-set list
+" set listchars=tab:▹\ ,eol:¬
+" set list
 """ syntax colors
 syntax on
 filetype on
