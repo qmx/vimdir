@@ -110,7 +110,10 @@ nmap <leader>f :set foldmethod=indent<CR>
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>w :set wrap<CR>
 nmap <leader>W :set nowrap<CR>
+""" java mappings
 nmap <leader>j :JavaSearchContext<CR>
+nmap <leader>o :JavaImportMissing<CR>:JavaImportSort<CR>:JavaImportClean<CR>
+
 
 let g:tex_flavor='latex'
 
