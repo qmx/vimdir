@@ -88,6 +88,9 @@ compiler ruby
 colorscheme desert
 set background=dark
 
+""" cursor line
+set cursorline
+
 """ folding settings
 set nofoldenable
 augroup vimrc
