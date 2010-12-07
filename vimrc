@@ -31,6 +31,7 @@ if has("autocmd")
 	
 	" Treat different file types as one we know:
 	autocmd BufNewFile,BufRead *.rss,*.atom setfiletype xml
+	autocmd BufNewFile,BufRead Thorfile,Rakefile setfiletype ruby
 endif
 
 set smarttab
