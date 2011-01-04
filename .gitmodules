@@ -49,3 +49,9 @@
 [submodule "bundles/command-t"]
 	path = bundles/command-t
 	url = git://git.wincent.com/command-t.git
+[submodule "bundles/vim-textobj-user"]
+	path = bundles/vim-textobj-user
+	url = git://github.com/kana/vim-textobj-user.git
+[submodule "bundles/vim-textobj-rubyblock"]
+	path = bundles/vim-textobj-rubyblock
+	url = git://github.com/nelstrom/vim-textobj-rubyblock.git
