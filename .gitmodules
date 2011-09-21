@@ -58,3 +58,6 @@
 [submodule "bundles/puppet"]
 	path = bundles/puppet
 	url = git://github.com/rodjek/vim-puppet.git
+[submodule "bundles/vim-matchit"]
+	path = bundles/vim-matchit
+	url = https://github.com/mhz/vim-matchit.git
