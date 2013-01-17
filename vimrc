@@ -1,20 +1,40 @@
-runtime! autoload/pathogen.vim
+set nocompatible               " be iMproved
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-if exists('g:loaded_pathogen')
-  call pathogen#runtime_prepend_subdirectories(expand('~/.vim/bundles'))
-end
+Bundle 'gmarik/vundle'
 
-if has("gui_running")
-    set guioptions=egmrt
-    set showtabline=2
-endif
+Bundle 'adrianoalmeida7/vim-afc'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'kien/ctrlp.vim'
+Bundle 'lukaszb/vim-web-indent'
+Bundle 'jamessan/vim-gnupg'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
+Bundle 'mattn/zencoding-vim'
+Bundle 'qmx/vim-json'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-ragtag'
+Bundle 'tpope/vim-surround'
+Bundle 'tsaleh/vim-align'
+Bundle 'tsaleh/vim-matchit'
+Bundle 'vim-scripts/asciidoc.vim'
+Bundle 'vim-scripts/c.vim'
+Bundle 'vim-scripts/VimClojure'
+Bundle 'vim-scripts/cscope_macros.vim'
+Bundle 'vim-scripts/trailing-whitespace'
 
-""" fix for some stupid terms
-if &term == "screen"
-	let term = "xterm"
-endif
+let g:vundle_default_git_proto = 'git'
 
-set nocompatible
+filetype plugin indent on
+
+let g:GPGDefaultRecipients = ["qmx@qmx.me"]
+let g:user_zen_expandabbr_key = '<c-y>' 
+let g:use_zen_complete_tag = 1
 
 if has("autocmd")
 	" File type detection
@@ -27,12 +47,17 @@ if has("autocmd")
 	" Styles depending on file type
 	autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 	autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
-	autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
-	
+	autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType markdown setlocal ts=4 sts=4 sw=4 expandtab
+
 	" Treat different file types as one we know:
 	autocmd BufNewFile,BufRead *.rss,*.atom setfiletype xml
-	autocmd BufNewFile,BufRead Thorfile,Rakefile setfiletype ruby
+	autocmd BufNewFile,BufRead Thorfile,Rakefile,*.watchr setfiletype ruby
+	autocmd BufNewFile,BufRead *.clj setfiletype clojure
 endif
+
+set guifont=Menlo:h14
 
 set smarttab
 set autoindent
@@ -84,13 +109,15 @@ syntax on
 filetype on
 filetype indent on
 filetype plugin on
-compiler ruby
 
 colorscheme desert
 set background=dark
 
 """ cursor line
 set cursorline
+
+""" line numbers
+set number
 
 """ folding settings
 set nofoldenable
@@ -101,6 +128,7 @@ augroup END
 
 """ remapping leader to comma key
 let mapleader = ","
+let maplocalleader = ","
 
 """ reload .vimrc
 nmap <leader>v :source $MYVIMRC<CR>
@@ -128,9 +156,15 @@ match Todo /\s\+$/
 " Use substitute() instead of printf() to handle '%%s' modeline in LaTeX
 " files.
 function! AppendModeline()
-  let l:modeline = printf(" vim: set ts=%d sw=%d tw=%d :",
-        \ &tabstop, &shiftwidth, &textwidth)
-  let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
-  call append(line("$"), l:modeline)
+	let l:modeline = printf(" vim: set ts=%d sw=%d tw=%d :",
+				\ &tabstop, &shiftwidth, &textwidth)
+	let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
+	call append(line("$"), l:modeline)
 endfunction
 nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
+
+" Settings for VimClojure
+let vimclojure#HighlightBuiltins =1
+let vimclojure#ParenRainbow =1
+let vimclojure#FuzzyIndent=0
+let vimclojure#WantNailgun=1
