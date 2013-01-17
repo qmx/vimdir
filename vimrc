@@ -1,9 +1,20 @@
 set nocompatible               " be iMproved
+
+" Setting up Vundle - the vim plugin bundler
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+	echo "Installing Vundle.."
+	echo ""
+	silent !mkdir -p ~/.vim/bundle
+	silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+	let iCanHazVundle=0
+endif
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
 Bundle 'gmarik/vundle'
-
+"Add your bundles here
+Bundle 'Syntastic' "uber awesome syntax and errors highlighter
 Bundle 'adrianoalmeida7/vim-afc'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'kien/ctrlp.vim'
@@ -29,11 +40,18 @@ Bundle 'vim-scripts/cscope_macros.vim'
 Bundle 'vim-scripts/trailing-whitespace'
 
 let g:vundle_default_git_proto = 'git'
+"...All your other bundles...
+if iCanHazVundle == 0
+	echo "Installing Bundles, please ignore key map error messages"
+	echo ""
+	:BundleInstall
+endif
+" Setting up Vundle - the vim plugin bundler end
 
 filetype plugin indent on
 
 let g:GPGDefaultRecipients = ["qmx@qmx.me"]
-let g:user_zen_expandabbr_key = '<c-y>' 
+let g:user_zen_expandabbr_key = '<c-y>'
 let g:use_zen_complete_tag = 1
 
 if has("autocmd")
