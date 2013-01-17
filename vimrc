@@ -73,6 +73,7 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.rss,*.atom setfiletype xml
 	autocmd BufNewFile,BufRead Thorfile,Rakefile,*.watchr setfiletype ruby
 	autocmd BufNewFile,BufRead *.clj setfiletype clojure
+	autocmd BufRead,BufNewFile *mutt-* setfiletype mail
 endif
 
 set guifont=Menlo:h14
