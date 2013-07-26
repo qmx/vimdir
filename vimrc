@@ -18,6 +18,7 @@ Bundle 'Syntastic'
 Bundle 'adrianoalmeida7/vim-afc'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'kien/ctrlp.vim'
+Bundle 'groenewege/vim-less'
 Bundle 'lukaszb/vim-web-indent'
 Bundle 'jamessan/vim-gnupg'
 Bundle 'mattn/webapi-vim'
@@ -26,6 +27,8 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'qmx/vim-json'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
+"Bundle 'sleistner/vim-jshint'
+Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
@@ -38,6 +41,7 @@ Bundle 'vim-scripts/c.vim'
 Bundle 'vim-scripts/VimClojure'
 Bundle 'vim-scripts/cscope_macros.vim'
 Bundle 'vim-scripts/trailing-whitespace'
+Bundle 'wting/rust.vim'
 
 let g:vundle_default_git_proto = 'git'
 "...All your other bundles...
@@ -65,9 +69,11 @@ if has("autocmd")
 	" Styles depending on file type
 	autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 	autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
-	autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
 	autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
 	autocmd FileType markdown setlocal ts=4 sts=4 sw=4 expandtab
+	autocmd FileType c setlocal ts=4 sts=4 sw=4 expandtab
+	autocmd FileType cpp setlocal ts=4 sts=4 sw=4 expandtab
 
 	" Treat different file types as one we know:
 	autocmd BufNewFile,BufRead *.rss,*.atom setfiletype xml
