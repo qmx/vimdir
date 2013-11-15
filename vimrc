@@ -169,7 +169,7 @@ let g:tex_flavor='latex'
 cab WQ wq | cab Wq wq | cab W w | cab Q q
 
 " fix stupid mavericks backspace issue
-set backspace = 2
+set backspace=2
 
 " Indent XML readably
 function! DoPrettyXML()
