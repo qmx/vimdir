@@ -23,7 +23,7 @@ Bundle 'lukaszb/vim-web-indent'
 Bundle 'jamessan/vim-gnupg'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'qmx/vim-json'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
@@ -55,8 +55,6 @@ endif
 filetype plugin indent on
 
 let g:GPGDefaultRecipients = ["qmx@qmx.me"]
-let g:user_zen_expandabbr_key = '<c-y>'
-let g:use_zen_complete_tag = 1
 
 if has("autocmd")
 	" File type detection
