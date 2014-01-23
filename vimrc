@@ -78,6 +78,8 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead Thorfile,Rakefile,*.watchr setfiletype ruby
 	autocmd BufNewFile,BufRead *.clj setfiletype clojure
 	autocmd BufRead,BufNewFile *mutt-* setfiletype mail
+
+	autocmd BufEnter /private/tmp/crontab.* setl backupcopy=yes
 endif
 
 set guifont=Menlo:h14
