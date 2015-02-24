@@ -87,7 +87,7 @@ if has("autocmd")
 	autocmd BufEnter /private/tmp/crontab.* setl backupcopy=yes
 endif
 
-set guifont=Menlo:h14
+set guifont=Menlo:h18
 
 set smarttab
 set autoindent
